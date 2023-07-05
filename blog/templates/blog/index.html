@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}My Blog {% endblock  %}
+
+{% block content%}
+<header id= "main-navigation">
+    <h1><a href =""> Arora's Blog</a></h1>
+    <nav>
+        <a href="">All posts</a>
+    </nav>
+</header>
+
+<section id = "welcome">
+    <header>
+        
+        <img src="" alt= "Ayush- The author of this Blog"/>
+        <h2> Ayush's Blog</h2>
+    </header>
+
+    <p> Hi, I am Ayush and I love to blog about latest technologies!</p>
+</section>
+
+<section id= "latest-posts">
+    <h2>My latest Thoughts</h2>
+
+    <ul>
+        <li>
+            <article class="post">
+                <a href "">
+                    <img src="" alt= "Mountain Hiking" />
+                    <div class= "post__content">
+                        <h3>Mountain Hiking</h3>
+                        <p>
+                            Mountain hiking offers a thrilling adventure as you conquer rugged terrains, navigate challenging trails, and immerse yourself in breathtaking natural landscapes. From the awe-inspiring vistas from mountaintops to the sense of camaraderie among fellow hikers, mountain hiking is a transformative experience that fuels a sense of exploration, resilience, and appreciation for the wonders of the outdoors.
+
+                        </p>
+                </a>
+            </article>
+        </l1>
+    </ul>
+</section> 
+
+<section id = "About">
+    <h2>What I Do</h2>
+    <p>
+        I love programming, and I love to travel. My goal is to keep growing as a developer!
+    </p>
+    <p>
+        I might not know everything, but I have a good grasping power , so I learn quick. It would be great if you could consider my candidature for the internship, really excited for the role!
+    </p>
+</section>
+{% endblock %}
