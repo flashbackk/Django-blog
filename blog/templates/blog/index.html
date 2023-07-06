@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}My Blog {% endblock  %}
 
 {% block content%}
-<header id= "main-navigation">
-    <h1><a href =""> Arora's Blog</a></h1>
-    <nav>
-        <a href="">All posts</a>
-    </nav>
-</header>
+    <header id= "main-navigation">
+        <h1><a href="">Ayush's Blog</a><h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
 
 <section id = "welcome">
     <header>
         
-        <img src="" alt= "Ayush- The author of this Blog"/>
-        <h2> Ayush's Blog</h2>
+        <img src="{% static "blog/images/blogging.png" %}" alt= "Ayush- The author of this Blog"/>
     </header>
 
     <p> Hi, I am Ayush and I love to blog about latest technologies!</p>
@@ -24,19 +25,9 @@
     <h2>My latest Thoughts</h2>
 
     <ul>
-        <li>
-            <article class="post">
-                <a href "">
-                    <img src="" alt= "Mountain Hiking" />
-                    <div class= "post__content">
-                        <h3>Mountain Hiking</h3>
-                        <p>
-                            Mountain hiking offers a thrilling adventure as you conquer rugged terrains, navigate challenging trails, and immerse yourself in breathtaking natural landscapes. From the awe-inspiring vistas from mountaintops to the sense of camaraderie among fellow hikers, mountain hiking is a transformative experience that fuels a sense of exploration, resilience, and appreciation for the wonders of the outdoors.
-
-                        </p>
-                </a>
-            </article>
-        </l1>
+        {% for post in posts %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
     </ul>
 </section> 
 
